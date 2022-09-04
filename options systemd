@@ -1,0 +1,13 @@
+sudo /usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
+
+Using provided startup.options file: /etc/logstash/startup.options
+Manually creating startup for specified platform: systemd
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+/usr/share/logstash/vendor/bundle/jruby/2.5.0/gems/pleaserun-0.0.30/lib/pleaserun/platform/base.rb:112: warning: constant ::Fixnum is deprecated
+Successfully created system startup script for Logstash
+
+--------------------------------------------
+systemctl enable logstash
+systemctl start logstash
+
+cat /var/log/logstash/logstash-plain.log
